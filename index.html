@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andhra Restaurant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <h1>Andhra Restaurant</h1>
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#location">Location</a></li>
+          <li><a href="#reservation">Reservation</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section id="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-container">
+      <div class="menu-item" data-dish="hyderabadi-biryani">
+        <h3>Hyderabadi Biryani</h3>
+        <p>Spicy rice dish with marinated meat, cooked with aromatic spices.</p>
+        <span>Rs.350</span>
+      </div>
+      <div class="menu-item" data-dish="andhra-chicken-curry">
+        <h3>Andhra Chicken Curry</h3>
+        <p>A rich and spicy chicken curry with a mix of Andhra flavors.</p>
+        <span>Rs.295</span>
+      </div>
+      <div class="menu-item" data-dish="prawn-fry">
+        <h3>Prawn Fry</h3>
+        <p>Juicy prawns cooked to perfection with aromatic spices.</p>
+        <span>Rs.315</span>
+      </div>
+      <div class="menu-item" data-dish="tomato-pappu">
+        <h3>Tomato Pappu</h3>
+        <p>A comforting dal made with tomatoes and seasoned with mustard and curry leaves.</p>
+        <span>Rs.225</span>
+      </div>
+      <div class="menu-item" data-dish="vada">
+        <h3>Vada</h3>
+        <p>Crispy fried doughnut-shaped fritters made from urad dal, served with chutneys.</p>
+        <span>Rs.95</span>
+      </div>
+      <div class="menu-item" data-dish="idli-with-sambar">
+        <h3>Idli with Sambar</h3>
+        <p>Steamed rice cakes served with spicy sambar and coconut chutney.</p>
+        <span>Rs.120</span>
+      </div>
+    </div>
+  </section>
+  <div id="dish-details-container" class="dish-details-container">
+    <div class="dish-details">
+      <span class="close-btn">&times;</span>
+      <img id="dish-image" src="" alt="">
+      <div class="dish-info">
+        <h2 id="dish-title"></h2>
+        <p id="dish-price"></p>
+        <p id="dish-description"></p>
+        <h3>Ingredients:</h3>
+        <ul id="dish-ingredients">
+        </ul>
+        <h3>Preparation Time:</h3>
+        <p id="dish-time"></p>
+      </div>
+    </div>
+  </div>
+  <section id="location">
+    <h2>Our Location</h2>
+    <div style="margin-top: 20px;">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.266589447707!2d78.3678714148769!3d17.44795098804491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93dc8b5b0a5b%3A0x6c69d1a75e1a5a0!2sAndhra%20Restaurant!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+              width="100%" 
+              height="400" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy"></iframe>
+    </div>
+  </section>
+  <section id="reservation">
+    <h2>Make a Reservation</h2>
+    <form id="reservation-form" action="submit_reservation.php" method="post">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="date">Reservation Date:</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+      <div class="form-group">
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time" required>
+      </div>
+      <div class="form-group">
+        <label for="guests">Number of Guests:</label>
+        <input type="number" id="guests" name="guests" min="1" max="20" required>
+      </div>
+      <button type="submit">Reserve Table</button>
+    </form>
+    <p id="form-message"></p>
+  </section>
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="Hyd Biryani.jpg" alt="Hyderabadi Biryani">
+            <p>Hyderabadi Biryani</p>
+        </div>
+        <div class="gallery-item">
+            <img src="Chicken Curry.jpg" alt="Andhra Chicken Curry">
+            <p>Andhra Chicken Curry</p>
+        </div>
+        <div class="gallery-item">
+            <img src="Prawn Fry.jpg" alt="Prawn Fry">
+            <p>Prawn Fry</p>
+        </div>
+        <div class="gallery-item">
+            <img src="Idli with Sambar.jpg" alt="Idli with Sambar">
+            <p>Idli with Sambar</p>
+        </div>
+        <div class="gallery-item">
+            <img src="Vada.jpg" alt="Vada">
+            <p>Vada</p>
+        </div>
+        <div class="gallery-item">
+            <img src="Tomato Pappu.jpg" alt="Tomato Pappu">
+            <p>Tomato Pappu</p>
+        </div>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2023 Andhra Restaurant. All rights reserved.</p>
+    <p>Contact: info@andhrarestaurant.com | Phone: +91 9876543210</p>
+    <div class="social-media">
+      <a href="https://www.facebook.com">Facebook</a>
+      <a href="https://www.instagram.com">Instagram</a>
+      <a href="https://www.twitter.com">Twitter</a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
